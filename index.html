@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Catálogo visual de Chie Bonsai, negocio dedicado al cultivo y cuidado de bonsáis naturales.">
+    <meta name="author" content="Chie Bonsai">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chie Bonsai | Catálogo de bonsáis</title>
+
+    <!-- Open Graph: así se ve el link cuando alguien lo comparte en WhatsApp o redes -->
+    <meta property="og:title" content="Chie Bonsai | Sabiduría en miniatura">
+    <meta property="og:description" content="Bonsáis naturales para decorar, regalar y conectar con la calma.">
+    <meta property="og:image" content="assets/img/catalogo/01_bonsai_copa_redonda_tronco_expuesto.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon: ícono que aparece en la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="assets/img/logo/logo_chie_bonsai.png">
+
+    <!-- Google Fonts: tipografía Nunito en lugar de Arial -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <a class="header__logo" href="#inicio">
+            <img src="assets/img/logo/logo_chie_bonsai.png" alt="Logo de Chie Bonsai">
+        </a>
+
+        <!-- Botón hamburguesa: solo visible en mobile -->
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+        </button>
+
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#cuidados">Cuidados</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ==================== HERO ==================== -->
+        <section class="hero" id="inicio">
+            <div class="hero__text">
+                <p class="eyebrow">Chie Bonsai</p>
+                <h1>Sabiduría en miniatura</h1>
+
+                <p>
+                    Bonsáis naturales para decorar, regalar y conectar con la calma.
+                </p>
+
+                <div class="hero__buttons">
+                    <a class="btn btn--primary" href="#catalogo">Ver catálogo</a>
+                    <a class="btn btn--secondary" href="#cuidados">Ver cuidados</a>
+                </div>
+
+                <div class="hero__details">
+                    <article>
+                        <img src="assets/img/iconos/icono_hoja.png" alt="Icono de hoja">
+                        <span>Natural</span>
+                    </article>
+                    <article>
+                        <img src="assets/img/iconos/icono_bonsai.png" alt="Icono de bonsái">
+                        <span>Artesanal</span>
+                    </article>
+                    <article>
+                        <img src="assets/img/iconos/icono_corazon.png" alt="Icono de corazón">
+                        <span>Decorativo</span>
+                    </article>
+                </div>
+            </div>
+
+            <div class="hero__image">
+                <span class="enso"></span>
+                <!-- La imagen del hero carga inmediatamente (sin lazy) porque es lo primero visible -->
+                <img src="assets/img/catalogo/01_bonsai_copa_redonda_tronco_expuesto.jpg"
+                     alt="Bonsái de copa redonda">
+                <div class="hero__note">
+                    <p>Pequeños árboles, grandes enseñanzas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NOSOTROS ==================== -->
+        <section class="section about" id="nosotros">
+            <div class="section__heading reveal">
+                <p class="eyebrow">Conócenos</p>
+                <h2>Un arte vivo para tu espacio</h2>
+                <p class="section__intro">
+                    Chie Bonsai presenta ejemplares naturales con una estética tranquila,
+                    elegante y cercana a la naturaleza.
+                </p>
+            </div>
+
+            <div class="about__content">
+                <article class="about__card reveal">
+                    <img src="assets/img/iconos/icono_bonsai.png" alt="Icono de bonsái">
+                    <h3>Ejemplares únicos</h3>
+                    <p>Cada bonsái tiene una forma y carácter diferente.</p>
+                </article>
+
+                <article class="about__card reveal">
+                    <img src="assets/img/iconos/icono_calidad.png" alt="Icono de calidad">
+                    <h3>Cuidado artesanal</h3>
+                    <p>Una propuesta pensada para transmitir calma y dedicación.</p>
+                </article>
+
+                <article class="about__card reveal">
+                    <img src="assets/img/iconos/icono_hoja.png" alt="Icono de hoja">
+                    <h3>Estilo natural</h3>
+                    <p>Colores tierra, verde y fondos claros para una imagen limpia.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== CATÁLOGO ==================== -->
+        <section class="section catalog catalog-showcase" id="catalogo">
+            <div class="section__heading catalog-heading reveal">
+                <p class="eyebrow">Catálogo de bonsáis</p>
+                <h2>Nuestros bonsáis</h2>
+                <p class="section__intro">
+                    Una selección visual de bonsáis decorativos y naturales.
+                </p>
+            </div>
+
+            <!-- Botones de filtro por categoría -->
+            <div class="catalog-filter reveal">
+                <button class="filter-btn active" data-filtro="todos">Todos</button>
+                <button class="filter-btn" data-filtro="follaje">Follaje</button>
+                <button class="filter-btn" data-filtro="conifera">Conífera</button>
+                <button class="filter-btn" data-filtro="frutal">Frutal</button>
+                <button class="filter-btn" data-filtro="floral">Floral</button>
+            </div>
+
+            <!-- Mensaje que aparece si no hay resultados para un filtro -->
+            <p class="sin-resultados" id="sinResultados">
+                No hay bonsáis en esta categoría todavía.
+            </p>
+
+            <!-- ══════════════════════════════════════════
+                 CÓMO FUNCIONA EL LINK DE WHATSAPP:
+
+                 Formato: https://wa.me/NUMERO?text=MENSAJE
+
+                 El número debe ir en formato internacional,
+                 sin el +, sin espacios, sin guiones.
+
+                 Ecuador (código 593):
+                 Si tu número es  → 0987 654 321
+                 El link queda    → wa.me/593987654321
+
+                 Reemplaza 593XXXXXXXXX en TODOS los enlaces
+                 con el número real del negocio.
+            ══════════════════════════════════════════ -->
+
+            <!-- Bonsái 1: Follaje -->
+            <article class="bonsai-slide bonsai-slide--compact reveal" data-filtro="follaje">
+                <div class="bonsai-slide__text">
+                    <span class="tag">Decorativo</span>
+                    <h3>Bonsái copa redonda</h3>
+                    <p>Follaje denso y forma elegante para interiores.</p>
+                    <div class="bonsai-tags">
+                        <span>Follaje</span>
+                        <span>Natural</span>
+                        <span>Interior</span>
+                    </div>
+                    <a href="https://wa.me/593959126929?text=Hola,%20me%20interesa%20el%20Bonsai%20copa%20redonda.%20%C2%BFEsta%20disponible%3F"
+                       class="bonsai-btn" target="_blank" rel="noopener">
+                        Consultar disponibilidad
+                    </a>
+                </div>
+                <div class="bonsai-slide__visual">
+                    <div class="bonsai-slide__image portrait foto-copa">
+                        <!-- loading="lazy": el navegador solo descarga la foto cuando el usuario llega a ella -->
+                        <img src="assets/img/catalogo/01_bonsai_copa_redonda_tronco_expuesto.jpg"
+                             alt="Bonsái copa redonda" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bonsái 2: Conífera -->
+            <article class="bonsai-slide bonsai-slide--reverse reveal" data-filtro="conifera">
+                <div class="bonsai-slide__text">
+                    <span class="tag">Junípero</span>
+                    <h3>Junípero inclinado</h3>
+                    <p>Forma asimétrica con movimiento y estilo japonés.</p>
+                    <div class="bonsai-tags">
+                        <span>Japonés</span>
+                        <span>Resistente</span>
+                        <span>Especial</span>
+                    </div>
+                    <a href="https://wa.me/593959126929?text=Hola,%20me%20interesa%20el%20Junipero%20inclinado.%20%C2%BFEsta%20disponible%3F"
+                       class="bonsai-btn" target="_blank" rel="noopener">
+                        Consultar disponibilidad
+                    </a>
+                </div>
+                <div class="bonsai-slide__visual">
+                    <div class="bonsai-slide__image landscape foto-junipero-inclinado">
+                        <img src="assets/img/catalogo/02_junipero_inclinado_estilo_japones.jpg"
+                             alt="Junípero inclinado" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bonsái 3: Follaje -->
+            <article class="bonsai-slide bonsai-slide--compact reveal" data-filtro="follaje">
+                <div class="bonsai-slide__text">
+                    <span class="tag">Follaje</span>
+                    <h3>Follaje denso</h3>
+                    <p>Copa compacta y presencia limpia para espacios modernos.</p>
+                    <div class="bonsai-tags">
+                        <span>Compacto</span>
+                        <span>Decorativo</span>
+                        <span>Interior</span>
+                    </div>
+                    <a href="https://wa.me/593959126929?text=Hola,%20me%20interesa%20el%20Bonsai%20de%20follaje%20denso.%20%C2%BFEsta%20disponible%3F"
+                       class="bonsai-btn" target="_blank" rel="noopener">
+                        Consultar disponibilidad
+                    </a>
+                </div>
+                <div class="bonsai-slide__visual">
+                    <div class="bonsai-slide__image portrait foto-follaje">
+                        <img src="assets/img/catalogo/03_bonsai_follaje_denso_maceta_azul.jpg"
+                             alt="Bonsái de follaje denso" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bonsái 4: Frutal -->
+            <article class="bonsai-slide bonsai-slide--reverse bonsai-slide--compact reveal" data-filtro="frutal">
+                <div class="bonsai-slide__text">
+                    <span class="tag">Frutal</span>
+                    <h3>Ficus frutal</h3>
+                    <p>Hojas brillantes y frutos verdes para un toque natural.</p>
+                    <div class="bonsai-tags">
+                        <span>Frutal</span>
+                        <span>Verde</span>
+                        <span>Llamativo</span>
+                    </div>
+                    <a href="https://wa.me/593959126929?text=Hola,%20me%20interesa%20el%20Ficus%20frutal.%20%C2%BFEsta%20disponible%3F"
+                       class="bonsai-btn" target="_blank" rel="noopener">
+                        Consultar disponibilidad
+                    </a>
+                </div>
+                <div class="bonsai-slide__visual">
+                    <div class="bonsai-slide__image portrait foto-ficus">
+                        <img src="assets/img/catalogo/04_bonsai_ficus_frutal_verde.jpg"
+                             alt="Ficus frutal" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bonsái 5: Floral -->
+            <article class="bonsai-slide bonsai-slide--compact reveal" data-filtro="floral">
+                <div class="bonsai-slide__text">
+                    <span class="tag">Flor</span>
+                    <h3>Buganvilla roja</h3>
+                    <p>Flores intensas para dar color y vida al espacio.</p>
+                    <div class="bonsai-tags">
+                        <span>Flor</span>
+                        <span>Color</span>
+                        <span>Decorativo</span>
+                    </div>
+                    <a href="https://wa.me/593959126929?text=Hola,%20me%20interesa%20la%20Buganvilla%20roja.%20%C2%BFEsta%20disponible%3F"
+                       class="bonsai-btn" target="_blank" rel="noopener">
+                        Consultar disponibilidad
+                    </a>
+                </div>
+                <div class="bonsai-slide__visual">
+                    <div class="bonsai-slide__image portrait foto-buganvilla">
+                        <img src="assets/img/catalogo/05_bonsai_buganvilla_flor_roja.jpg"
+                             alt="Buganvilla roja" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bonsái 6: Frutal -->
+            <article class="bonsai-slide bonsai-slide--reverse bonsai-slide--compact reveal" data-filtro="frutal">
+                <div class="bonsai-slide__text">
+                    <span class="tag">Cítrico</span>
+                    <h3>Cítrico amarillo</h3>
+                    <p>Frutos amarillos que aportan frescura y alegría.</p>
+                    <div class="bonsai-tags">
+                        <span>Frutal</span>
+                        <span>Luminoso</span>
+                        <span>Alegre</span>
+                    </div>
+                    <a href="https://wa.me/593959126929?text=Hola,%20me%20interesa%20el%20Bonsai%20citrico%20amarillo.%20%C2%BFEsta%20disponible%3F"
+                       class="bonsai-btn" target="_blank" rel="noopener">
+                        Consultar disponibilidad
+                    </a>
+                </div>
+                <div class="bonsai-slide__visual">
+                    <div class="bonsai-slide__image portrait foto-citrico">
+                        <img src="assets/img/catalogo/06_bonsai_citrico_frutos_amarillos.jpg"
+                             alt="Cítrico amarillo" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bonsái 7: Conífera -->
+            <article class="bonsai-slide reveal" data-filtro="conifera">
+                <div class="bonsai-slide__text">
+                    <span class="tag">Compacto</span>
+                    <h3>Junípero compacto</h3>
+                    <p>Silueta baja, clásica y equilibrada.</p>
+                    <div class="bonsai-tags">
+                        <span>Clásico</span>
+                        <span>Sereno</span>
+                        <span>Abundante</span>
+                    </div>
+                    <a href="https://wa.me/593959126929?text=Hola,%20me%20interesa%20el%20Junipero%20compacto.%20%C2%BFEsta%20disponible%3F"
+                       class="bonsai-btn" target="_blank" rel="noopener">
+                        Consultar disponibilidad
+                    </a>
+                </div>
+                <div class="bonsai-slide__visual">
+                    <div class="bonsai-slide__image landscape foto-compacto">
+                        <img src="assets/img/catalogo/07_junipero_compacto_maceta_crema.jpg"
+                             alt="Junípero compacto" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bonsái 8: Conífera -->
+            <article class="bonsai-slide bonsai-slide--reverse bonsai-slide--compact reveal" data-filtro="conifera">
+                <div class="bonsai-slide__text">
+                    <span class="tag">Conífera</span>
+                    <h3>Conífera vertical</h3>
+                    <p>Forma natural con presencia fuerte y vertical.</p>
+                    <div class="bonsai-tags">
+                        <span>Vertical</span>
+                        <span>Natural</span>
+                        <span>Fuerte</span>
+                    </div>
+                    <a href="https://wa.me/593959126929?text=Hola,%20me%20interesa%20la%20Conifera%20vertical.%20%C2%BFEsta%20disponible%3F"
+                       class="bonsai-btn" target="_blank" rel="noopener">
+                        Consultar disponibilidad
+                    </a>
+                </div>
+                <div class="bonsai-slide__visual">
+                    <div class="bonsai-slide__image portrait foto-conifera">
+                        <img src="assets/img/catalogo/08_conifera_vertical_estilo_natural.jpg"
+                             alt="Conífera vertical" loading="lazy">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ==================== CUIDADOS ==================== -->
+        <section class="section care" id="cuidados">
+            <div class="section__heading reveal">
+                <p class="eyebrow">Guía rápida</p>
+                <h2>Cuidados básicos</h2>
+                <p class="section__intro">
+                    Cuidados simples para mantener un bonsái sano y decorativo.
+                </p>
+            </div>
+
+            <div class="care__grid">
+                <article class="care__item reveal">
+                    <img src="assets/img/iconos/icono_inicio.png" alt="Icono de ubicación">
+                    <h3>Ubicación</h3>
+                    <p>Buena luz natural y ventilación suave.</p>
+                </article>
+
+                <article class="care__item reveal">
+                    <img src="assets/img/iconos/icono_regadera.png" alt="Icono de regadera">
+                    <h3>Riego</h3>
+                    <p>Riega cuando la tierra empiece a sentirse seca.</p>
+                </article>
+
+                <article class="care__item reveal">
+                    <img src="assets/img/iconos/icono_hoja.png" alt="Icono de hoja">
+                    <h3>Poda</h3>
+                    <p>Recorta con cuidado para conservar su forma.</p>
+                </article>
+
+                <article class="care__item reveal">
+                    <img src="assets/img/iconos/icono_corazon.png" alt="Icono de corazón">
+                    <h3>Paciencia</h3>
+                    <p>Observación constante y cuidado tranquilo.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACTO ==================== -->
+        <section class="contact" id="contacto">
+            <div class="contact__box reveal">
+                <img class="contact__icon" src="assets/img/iconos/icono_contacto.png" alt="Icono de contacto">
+
+                <p class="eyebrow">Consulta disponibilidad</p>
+                <h2>Encuentra tu bonsái ideal</h2>
+
+                <p>
+                    Escríbenos directamente por WhatsApp o síguenos en redes sociales para ver más.
+                </p>
+
+                <a href="https://wa.me/593959126929?text=Hola,%20me%20interesa%20conocer%20mas%20sobre%20los%20bonsais%20de%20Chie%20Bonsai.%20%C2%BFMe%20pueden%20ayudar%3F"
+                   class="btn btn--whatsapp" target="_blank" rel="noopener">
+                    💬 Escribir por WhatsApp
+                </a>
+
+                <div class="social">
+                    <a href="#" class="social__link">
+                        <img src="assets/img/iconos/icono_instagram.png" alt="Icono de Instagram">
+                        Instagram próximamente
+                    </a>
+                    <a href="#" class="social__link">
+                        <img src="assets/img/iconos/icono_facebook.png" alt="Icono de Facebook">
+                        Facebook próximamente
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer-clean">
+        <img src="assets/img/logo/logo_chie_bonsai.png" alt="Logo Chie Bonsai">
+
+        <p class="footer-clean__phrase">
+            Pequeños árboles, grandes enseñanzas.
+        </p>
+
+        <nav class="footer-clean__nav">
+            <a href="#inicio">Inicio</a>
+            <span>|</span>
+            <a href="#catalogo">Catálogo</a>
+            <span>|</span>
+            <a href="#cuidados">Cuidados</a>
+            <span>|</span>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </footer>
+
+    <!-- Botón flotante para volver al inicio -->
+    <button class="btn-top" aria-label="Volver al inicio">↑</button>
+
+
+    <!-- ================================================
+         JAVASCRIPT — comentado paso a paso
+         ================================================ -->
+    <script>
+
+        /* ─────────────────────────────────────────────
+           1. MENÚ HAMBURGUESA
+           Al hacer clic en el botón, el menú aparece
+           o desaparece en pantallas pequeñas.
+        ───────────────────────────────────────────── */
+        var hamburger = document.querySelector('.hamburger');
+        var nav = document.querySelector('.nav');
+
+        hamburger.addEventListener('click', function () {
+            nav.classList.toggle('nav--open');
+            hamburger.classList.toggle('hamburger--open');
+            var estaAbierto = nav.classList.contains('nav--open');
+            hamburger.setAttribute('aria-expanded', estaAbierto);
+        });
+
+        // Cierra el menú al tocar cualquier enlace de la nav
+        document.querySelectorAll('.nav a').forEach(function (enlace) {
+            enlace.addEventListener('click', function () {
+                nav.classList.remove('nav--open');
+                hamburger.classList.remove('hamburger--open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+
+        /* ─────────────────────────────────────────────
+           2. ENLACE ACTIVO EN LA NAV + BOTÓN VOLVER ARRIBA
+           Al hacer scroll, detecta en qué sección estás
+           y marca el enlace correspondiente en la nav.
+        ───────────────────────────────────────────── */
+        var secciones   = document.querySelectorAll('section[id]');
+        var enlacesNav  = document.querySelectorAll('.nav a[href^="#"]');
+        var botonArriba = document.querySelector('.btn-top');
+
+        window.addEventListener('scroll', function () {
+            var posicion = window.scrollY;
+            var seccionActual = '';
+
+            secciones.forEach(function (seccion) {
+                if (posicion >= seccion.offsetTop - 130) {
+                    seccionActual = seccion.getAttribute('id');
+                }
+            });
+
+            enlacesNav.forEach(function (enlace) {
+                enlace.classList.remove('active');
+                if (enlace.getAttribute('href') === '#' + seccionActual) {
+                    enlace.classList.add('active');
+                }
+            });
+
+            // Mostrar el botón de volver arriba después de bajar 500px
+            if (posicion > 500) {
+                botonArriba.classList.add('btn-top--visible');
+            } else {
+                botonArriba.classList.remove('btn-top--visible');
+            }
+        });
+
+
+        /* ─────────────────────────────────────────────
+           3. BOTÓN VOLVER ARRIBA
+        ───────────────────────────────────────────── */
+        botonArriba.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+
+        /* ─────────────────────────────────────────────
+           4. SCROLL REVEAL
+           Los elementos con clase "reveal" están
+           invisibles al inicio. Cuando el usuario llega
+           a ellos, aparecen con una animación suave.
+        ───────────────────────────────────────────── */
+        var observador = new IntersectionObserver(function (entradas) {
+            entradas.forEach(function (entrada) {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add('reveal--visible');
+                    observador.unobserve(entrada.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(function (el) {
+            observador.observe(el);
+        });
+
+
+        /* ─────────────────────────────────────────────
+           5. FILTRO DEL CATÁLOGO
+           Los botones muestran u ocultan los bonsáis
+           según la categoría seleccionada.
+           Incluye animación suave y mensaje si no hay
+           resultados en esa categoría.
+        ───────────────────────────────────────────── */
+        var botonesFilter  = document.querySelectorAll('.filter-btn');
+        var tarjetas       = document.querySelectorAll('.bonsai-slide');
+        var sinResultados  = document.getElementById('sinResultados');
+
+        botonesFilter.forEach(function (boton) {
+            boton.addEventListener('click', function () {
+
+                // Quitar la clase activa de todos los botones
+                botonesFilter.forEach(function (b) { b.classList.remove('active'); });
+
+                // Marcar solo el botón clickeado como activo
+                boton.classList.add('active');
+
+                var filtro = boton.getAttribute('data-filtro');
+                var visibles = 0;
+
+                tarjetas.forEach(function (tarjeta) {
+                    var coincide = filtro === 'todos' || tarjeta.getAttribute('data-filtro') === filtro;
+
+                    if (coincide) {
+                        // Primero quitamos la clase de salida y mostramos
+                        tarjeta.classList.remove('oculto-salida');
+                        tarjeta.classList.remove('oculto');
+                        visibles++;
+                    } else {
+                        // Primero animamos la salida, luego ocultamos
+                        tarjeta.classList.add('oculto-salida');
+                        setTimeout(function () {
+                            tarjeta.classList.add('oculto');
+                        }, 300); // 300ms = duración de la animación CSS
+                    }
+                });
+
+                // Mostrar u ocultar el mensaje "sin resultados"
+                if (visibles === 0) {
+                    sinResultados.classList.add('sin-resultados--visible');
+                } else {
+                    sinResultados.classList.remove('sin-resultados--visible');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
